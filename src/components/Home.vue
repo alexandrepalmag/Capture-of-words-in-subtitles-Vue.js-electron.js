@@ -1,11 +1,13 @@
 <template>
   <v-container fluid>
-    <v-fom>
-      <v-file-input label="Select subtitles to be processed" prepend-icon="mdi-message-text" 
+    <v-form>
+      <v-file-input
+      label="Select subtitles to be processed"
+      prepend-icon="mdi-message-text" 
       append-icon="mdi-send"
-      multiple chips v-model="files"
-      @click:append-outer="accessSubtitles"></v-file-input>
-    </v-fom>
+      multiple chips
+      @click:append="accessSubtitles"/>
+    </v-form>
     <div class="cards">
       <Card v-for="word in groupOfWords" :key="word.name" :name="word.name" :amount="word.amount" />
     </div>
@@ -20,11 +22,11 @@ export default {
   data: function () {
     return {
       groupOfWords: [
-        { name: "Hello", amount: 800 },
-        { name: "Hello", amount: 800 },
-        { name: "Hello", amount: 800 },
-        { name: "Hello", amount: 800 },
-        { name: "Hello", amount: 800 },
+        { name: "Holliday", amount: 800 },
+        { name: "Hi", amount: 500 },
+        { name: "Helopslo", amount: 402 },
+        { name: "Hikis", amount: 802 },
+        { name: "Hello", amount: 128 },
       ],
     };
   },
